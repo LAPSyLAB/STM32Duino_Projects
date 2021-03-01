@@ -1,5 +1,16 @@
-// Simple demo of three threads
-// LED blink thread, print thread, and idle loop
+/*
+  FreeRTOS_Demo
+
+  Simple demo of three threads
+  LED blink thread, print thread, and idle loop
+
+
+  Oscilloscope check: Probe on PD12-PD15 pins.
+
+  This example code is in the public domain.
+
+  http://www.arduino.cc/en/Tutorial/Blink
+*/
 #include <STM32FreeRTOS.h>
 
 const uint8_t LED_PIN = PD12;
@@ -69,8 +80,6 @@ void setup() {
 
   
   Serial.begin(9600);
-  // wait for Leonardo
-//  while(!Serial) {}
 
   
     digitalWrite(LED_PIN3, HIGH);
