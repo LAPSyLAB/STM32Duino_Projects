@@ -27,10 +27,6 @@ int duty = 0;
 
 void setup()
 {
-  // Configure and start PWM
-  // MyTim->setPWM(channel, pin, 5, 10, NULL, NULL); // No callback required, we can simplify the function call
-  // MyTim->setPWM(channel, pin, 5, 10); // 5 Hertz, 10% dutycycle
-
   Serial.begin();
 }
 
@@ -39,7 +35,13 @@ void loop()
 {
   
       delay(1000);
+
+      // Configure and start PWM
+  // MyTim->setPWM(channel, pin, 5, 10, NULL, NULL); // No callback required, we can simplify the function call
+  // MyTim->setPWM(channel, pin, 5, 10); // 5 Hertz, 10% dutycycle
+
       MyTim->setPWM(channel, pin, 100, duty); // 100 Hertz, duty% dutycycle
+      
       Serial.print("PWM Duty Cycle: ");
       Serial.println(duty);
       

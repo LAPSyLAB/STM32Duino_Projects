@@ -5,8 +5,9 @@
 
 */
 
-int analogPin = PA1; // potentiometer wiper (middle terminal) connected to analog pin 3
+int analogPin = PA1; // potentiometer wiper (middle terminal) connected to analog pin PA1
                     // outside leads to ground and +5V
+                    
 int val = 0;  // variable to store the value read
 
 void setup() {
