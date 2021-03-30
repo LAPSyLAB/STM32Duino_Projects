@@ -1,12 +1,13 @@
 /*
   ADC Demo
 
+    Reads analog value (via ADC - 12bit resolution) from PA1 pin.
+    
     Oscilloscope check: Probe on PA1 pins.
 
 */
 
-int analogPin = PA1; // potentiometer wiper (middle terminal) connected to analog pin PA1
-                    // outside leads to ground and +5V
+int analogPin = PA1; // analog pin PA1
                     
 int val = 0;  // variable to store the value read
 
@@ -20,7 +21,8 @@ void setup() {
 
 void loop() {
   val = analogRead(analogPin);  // read the input pin
+  Serial.print("PA1=");          // debug value
   Serial.println(val);          // debug value
 
-  delay(500);
+  delay(1000);
 }

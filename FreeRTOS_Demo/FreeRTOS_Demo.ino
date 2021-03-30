@@ -13,10 +13,10 @@
 */
 #include <STM32FreeRTOS.h>
 
-const uint8_t LED_PIN = PD12;
-const uint8_t LED_PIN1 = PD13;
-const uint8_t LED_PIN2 = PD14;
-const uint8_t LED_PIN3 = PD15;
+const uint8_t LED_PIN  = PD12; //GREEN  vLEDFlashTask on 200 msec
+const uint8_t LED_PIN1 = PD13; //ORANGE vPrintTask on 1 sec
+const uint8_t LED_PIN2 = PD14; //RED    loop fast on/off
+const uint8_t LED_PIN3 = PD15; //BLUE   ON
 
 volatile uint32_t count = 0;
 
